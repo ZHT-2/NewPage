@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>中国胃 中国堡 - 塔斯汀</title>
+  <style>
+    /* 全局样式简化 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    /* 头部样式 */
+    .header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: white;
+      margin: 15px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      color: #d32f2f;
+      font-size: 2rem;
+    }
+
+    /* 导航栏样式 */
+    nav {
+      background-color: white;
+      padding: 12px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #d32f2f;
+      font-weight: 600;
+      font-family: "FangSong", "STFangsong", serif;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      background-color: #ffebee;
+    }
+
+    /* 主要内容区域 */
+    .main-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    /* 侧边栏样式 */
+    .sidebar {
+      background-color: white;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 内容区块通用样式 */
+    .content-section {
+      background-color: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .section-title {
+      color: #d32f2f;
+      border-bottom: 2px solid #ffebee;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+
+    /* 产品展示区域（纯文字版） */
+    .product-show {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .product-card {
+      border-left: 4px solid #d32f2f;
+      padding: 15px;
+      background-color: #fafafa;
+      border-radius: 0 5px 5px 0;
+      transition: background-color 0.3s ease;
+    }
+
+    .product-card:hover {
+      background-color: #fff8f8;
+    }
+
+    .product-info h3 {
+      color: #d32f2f;
+      margin-bottom: 8px;
+      font-size: 1.2rem;
+      font-family: "FangSong", serif;
+    }
+
+    .product-tags {
+      display: inline-block;
+      font-size: 0.8rem;
+      color: #666;
+      background-color: #ffebee;
+      padding: 3px 8px;
+      border-radius: 12px;
+      margin-bottom: 10px;
+    }
+
+    /* 特色文字样式 */
+    .tiffany-blue {
+      color: #0abab5;
+      font-weight: bold;
+      font-family: "SimSun", serif;
+    }
+
+    .rolex-green {
+      color: #006d3b;
+      font-family: "FangSong", serif;
+    }
+
+    /* 文化塑造区块 */
+    .culture-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 15px 0;
+    }
+
+    .culture-item {
+      padding: 15px;
+      border-radius: 5px;
+    }
+
+    /* 页脚样式 */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 768px) {
+      .main-content {
+        grid-template-columns: 1fr;
+      }
+      
+      .culture-grid, .product-show {
+        grid-template-columns: 1fr;
+      }
+      
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>中国胃 中国堡</h1>
+    </div>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#">网站首页</a></li>
+        <li><a href="#">品牌简介</a></li>
+        <li><a href="#">产品详情</a></li>
+        <li><a href="#">背景故事</a></li>
+        <li><a href="#">联系我们</a></li>
+      </ul>
+    </nav>
+
+    <div class="main-content">
+      <!-- 侧边栏 - 关于我们 -->
+      <aside class="sidebar">
+        <h2 class="section-title">关于我们</h2>
+        <p>塔斯汀中国汉堡创立于2012年，专注于中国味道的汉堡品牌。</p>
+        <p>我们致力于将传统中式美食与西式快餐相结合，创造符合中国人口味的新式汉堡。</p>
+        <p>目前在全国已有超过500家门店，深受消费者喜爱。</p>
+      </aside>
+
+      <!-- 主内容区 -->
+      <main>
+        <!-- 品牌简介 -->
+        <section class="content-section">
+          <h2 class="section-title">品牌简介</h2>
+          <p>塔斯汀中国汉堡，以"中国胃中国堡"为品牌理念，专注于研发符合中国人口味的汉堡产品。我们坚信，美食无国界，但可以更有中国味。</p>
+          <p>我们的研发团队深入各地，挖掘传统美食精髓，将北京烤鸭、四川辣子鸡、广东烧腊等经典中式菜品融入汉堡制作，创造出独一无二的中国汉堡系列。</p>
+          
+          <div class="rolex-green" style="margin: 15px 0; padding: 15px; background-color: #f0f9f8;">
+            <h3>品牌使命</h3>
+            <p>"让世界爱上中国味" - 这是塔斯汀始终坚持的使命。我们希望通过美食搭建文化桥梁，让更多人了解和喜爱中国饮食文化。</p>
+          </div>
+        </section>
+
+        <!-- 文化塑造 -->
+        <section class="content-section">
+          <h2 class="section-title">文化塑造</h2>
+          <p>在塔斯汀，我们不仅仅是在制作汉堡，更是在传承和创新中国文化。从店面设计到产品命名，从包装设计到员工服饰，处处体现中国元素。</p>
+          
+          <div class="culture-grid">
+            <div class="culture-item" style="background-color: #fff3e0;">
+              <h3 class="tiffany-blue">传统与现代的融合</h3>
+              <p>我们将中国传统建筑元素如榫卯结构、中式窗格等融入店面设计，同时采用现代简约风格，打造独特用餐环境。</p>
+            </div>
+            <div class="culture-item" style="background-color: #f3e5f5;">
+              <h3 class="tiffany-blue">产品文化内涵</h3>
+              <p>每个汉堡都有富有文化气息的名字，如"京韵烤鸭堡"、"蜀味麻辣堡"等，让顾客感受中国文化魅力。</p>
+            </div>
+          </div>
+          
+          <p>此外，我们还定期举办文化主题活动，如端午节粽子汉堡特辑、中秋节月饼汉堡等，让传统节日以新颖方式呈现。</p>
+        </section>
+
+        <!-- 产品展示（纯文字版） -->
+        <section class="content-section">
+          <h2 class="section-title">产品展示</h2>
+          <div class="product-show">
+            <!-- 京韵烤鸭堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">京味经典</span>
+                <h3>京韵烤鸭堡</h3>
+                <p>精选北京填鸭，经果木炭火慢烤至皮脆肉嫩，片取鸭胸精华部位；搭配现烙薄饼、爽脆黄瓜条与秘制甜面酱，复刻老北京烤鸭风味，汉堡胚融入小麦胚芽，一口兼具酥、香、鲜、嫩。</p>
+              </div>
+            </div>
+
+            <!-- 蜀味麻辣堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">川味热辣</span>
+                <h3>蜀味麻辣堡</h3>
+                <p>选用四川汉源花椒与子弹头辣椒，手工炒制麻辣肉酱；搭配卤制后煎香的鸡腿肉，辅以解辣的冰镇酸黄瓜与清爽生菜；辣度分微辣、中辣、特辣三档，满足不同嗜辣需求，后味带麻不烧胃。</p>
+              </div>
+            </div>
+
+            <!-- 广式烧腊堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">粤式鲜甜</span>
+                <h3>广式烧腊堡</h3>
+                <p>采用广式深井烧腊工艺，五花肉经麦芽糖、白醋腌制后挂炉烤制，皮脆肉嫩且带蜜汁；搭配灵魂酸梅酱与爽脆菠萝片，中和油脂感；汉堡胚抹一层广式叉烧酱，还原茶餐厅烧腊饭的经典风味。</p>
+              </div>
+            </div>
+
+            <!-- 江南梅干菜扣肉堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">江南风味</span>
+                <h3>江南梅干菜扣肉堡</h3>
+                <p>精选三层五花肉，先卤后蒸至酥烂不腻，搭配浙江绍兴梅干菜（提前用猪油炒香）；梅干菜吸满肉汁，咸香带甜；辅以清甜的笋丁，解腻增鲜，咬下满是江南农家菜的家常风味，适合偏爱咸鲜口的食客。</p>
+              </div>
+            </div>
+
+            <!-- 湘味剁椒鸡腿堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">湘味鲜辣</span>
+                <h3>湘味剁椒鸡腿堡</h3>
+                <p>选用湖南衡阳剁椒，手工剁碎后加盐、白酒发酵15天，酸辣鲜爽；搭配去骨鸡腿排（先卤后煎，外皮微焦），加入焯水后的莴笋片增加脆感；辣中带酸，不刺激肠胃，还原湘菜馆剁椒鱼头的鲜香风味。</p>
+              </div>
+            </div>
+
+            <!-- 北方酸菜猪肉堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">北方家常</span>
+                <h3>北方酸菜猪肉堡</h3>
+                <p>采用东北乳酸菌发酵酸菜，切丝后用猪油炒香去涩；搭配五花肉末（提前用酱油、十三香煸炒），肉末油润不柴，酸菜吸满肉香；加入少许蒜末提味，还原北方家庭酸菜猪肉饺子的经典味道，咸香开胃。</p>
+              </div>
+            </div>
+
+            <!-- 滇式菌菇牛堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">云南鲜菌</span>
+                <h3>滇式菌菇牛堡</h3>
+                <p>选用云南野生牛肝菌、鸡枞菌（冻干后复水），与牛肉末一同煸炒，加少许云南宣威火腿提鲜；牛肉饼采用澳洲和牛与本地黄牛肉混合，煎至七分熟；菌香与肉香融合，带淡淡的山野鲜味，适合喜欢鲜味的食客。</p>
+              </div>
+            </div>
+
+            <!-- 台式卤肉堡 -->
+            <div class="product-card">
+              <div class="product-info">
+                <span class="product-tags">台式风味</span>
+                <h3>台式卤肉堡</h3>
+                <p>五花肉切小丁，用台湾金兰酱油、冰糖、八角慢炖1.5小时，炖至肉丁酥烂、酱汁浓稠；搭配腌制过的酸萝卜丁解腻，加入少许香菜提香；汉堡胚抹一层台式甜辣酱，还原台湾夜市卤肉饭的浓郁风味，咸甜适中。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer>
+      <p>© 2023 塔斯汀中国汉堡 版权所有</p>
+      <p>客服热线：400-123-4567</p>
+    </footer>
+  </div>
+</body>
+</html>
