@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>原创小说交流会 · Writer’s Salon</title>
+    <style>
+        /* 页面整体：背景渐变 + 居中布局（用 text-align 和 inline-block，不用 margin/padding/border） */
+        body {
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background: linear-gradient(135deg, #f6ede3, #fdf7f1);
+            color: #3b3025;
+            text-align: center;
+        }
+
+        /* 主内容“卡片”区域，仅修改背景色为薄雾紫#F0E8FF，其他属性不变 */
+        .page {
+            display: inline-block;
+            background-color: #F0E8FF;
+            box-shadow: 0 0 30px rgba(80, 58, 35, 0.25);
+            text-align: left;
+            max-width: 720px;
+        }
+
+        /* 并集选择器：统一标题的颜色与字间距 */
+        h1, h2, h3, h4, h5, h6 {
+            color: #5b4636;
+            letter-spacing: 1px;
+        }
+
+        /* 类选择器：居中与右对齐 */
+        .center {
+            text-align: center;
+        }
+
+        .right {
+            text-align: right;
+        }
+
+        /* ID选择器：p#intro 强调样式（放大/加粗/特殊颜色） */
+        p#intro {
+            font-size: 140%;
+            font-weight: bold;
+            color: #c8493b;
+        }
+
+        /* 活动介绍的普通段落：通过行高与字间距增强舒适度 */
+        .intro-text {
+            line-height: 1.7;
+            letter-spacing: 0.5px;
+        }
+
+        /* 表格所在区域标题 */
+        .section-title {
+            text-align: center;
+        }
+
+        /* 表格基础样式：用背景色和行高区分层次 */
+        table {
+            width: 100%;
+            background-color: #fdf4e5;
+            font-size: 90%;
+        }
+
+        th {
+            background-color: #f2ddc2;
+            font-weight: bold;
+            text-align: left;
+            line-height: 2.2;
+        }
+
+        td {
+            line-height: 2.0;
+        }
+
+        /* 斑马纹行效果 */
+        table tr:nth-child(even) {
+            background-color: #fbf0de;
+        }
+
+        /* 鼠标移入整行高亮 */
+        table tr:hover {
+            background-color: #eed8be;
+        }
+
+        /* 后代选择器：div里的table中的链接样式 */
+        div table a {
+            font-weight: bold;
+            font-size: 110%;
+            color: #8b3b30;
+        }
+
+        /* 链接伪类样式 */
+        a:link {
+            color: #b6553b;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #7a7b52;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #e36a4c;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #3c4f9f;
+            text-decoration: underline;
+        }
+
+        /* 带类名的链接样式：a.red 和 a.blue */
+        a.red:link {
+            color: #e25b3d;
+        }
+
+        a.red:active {
+            color: #3046a1;
+        }
+
+        a.blue:link {
+            color: #4b7f60;
+        }
+
+        a.blue:active {
+            color: #a53aa4;
+        }
+
+        /* 伪元素：p首字放大，div首行高亮 */
+        p::first-letter {
+            font-size: 180%;
+            color: #c45b3f;
+        }
+
+        div::first-line {
+            color: #b04832;
+            font-weight: bold;
+        }
+
+        /* 底部公告样式 */
+        .notice {
+            font-size: 90%;
+            line-height: 1.6;
+        }
+
+        /* 小分隔线 */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, rgba(91,70,54,0), rgba(91,70,54,0.6), rgba(91,70,54,0));
+        }
+    </style>
+</head>
+<body>
+
+<div class="page">
+
+    <!-- 顶部标题区：div包裹h1 -->
+    <div>
+        <h1 class="center">原创小说交流会 · Writer’s Salon</h1>
+    </div>
+
+    <div class="divider"></div><br>
+
+    <!-- 活动介绍区：div包裹h2、多个p（含p#intro） -->
+    <div>
+        <h2 id="intro" class="center">用文字编织世界，以故事遇见同好</h2>
+
+        <p class="intro-text">
+            本次原创小说交流会专为热爱写作的伙伴打造，无论你是正在创作长篇故事的写作者，还是怀揣短篇灵感的文学爱好者，都能在这里找到共鸣。我们将围绕小说创作中的人物塑造、情节设计、主题表达等核心话题展开深度交流。
+        </p>
+
+        <p class="intro-text">
+            活动现场将设置作品朗读环节，你可以带来自己的原创片段，接受现场伙伴的真诚建议；同时也有资深写作者分享创作经验，解锁小说写作的实用技巧，助力你突破创作瓶颈。
+        </p>
+
+        <p id="intro">
+            重要提示：参与作品朗读需提前1天通过邮箱提交片段（限500字内），现场禁止商业推广行为，违规将取消参与资格！
+        </p>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- 活动报名信息表格区：div包裹h3、表格（含作品类型列，至少3行，含英文笔名） -->
+    <div>
+        <h3 class="section-title">交流会报名名单</h3>
+
+        <table>
+            <tr>
+                <th>编号</th>
+                <th>姓名/笔名</th>
+                <th>联系方式</th>
+                <th>作品类型</th>
+                <th>报名状态</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td><a href="https://example.com/author1">ShadowInk</a></td>
+                <td>138****1234</td>
+                <td>奇幻</td>
+                <td>已确认席位</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td><a href="https://example.com/author2">林晚</a></td>
+                <td>139****5678</td>
+                <td>现实</td>
+                <td>已确认席位</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>陈默</td>
+                <td>137****9012</td>
+                <td>悬疑</td>
+                <td>待确认</td>
+            </tr>
+            <tr>
+                <td>04</td>
+                <td>苏晓</td>
+                <td>136****3456</td>
+                <td>言情</td>
+                <td>候补名单</td>
+            </tr>
+        </table>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- 页面链接区：替换为指定的第三次作业链接 -->
+    <div>
+        <div class="center">
+            <p>
+                <a class="red" href="https://hongchenwusdnu.github.io/bookstore/job4.html">查看往期创作活动照片</a><br>
+                <a class="blue" href="https://zht-2.github.io/NewPage/job3/job3.html">在线咨询小说创作详情</a>
+            </p>
+        </div>
+    </div>
+
+    <br><div class="divider"></div><br>
+
+    <!-- 底部公告区：div.class="notice"，至少三段含br -->
+    <div class="notice">
+        活动地址：文创大厦5楼文学空间，地铁3号线“文创园站”B口出直行50米。<br>
+        活动时间：本周日14:00-17:30，建议提前20分钟到场签到，领取创作素材手册。<br>
+        温馨提醒：现场提供纸笔与饮用水，如需携带个人创作设备请自行保管；活动结束后可领取专属创作纪念徽章一枚。<br>
+        额外说明：本次交流会将评选优秀原创片段，获奖作品有机会在书店公众号发表，欢迎积极参与展示！
+    </div>
+
+    <br>
+
+</div>
+
+</body>
+</html>
